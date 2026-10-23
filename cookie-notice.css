@@ -1,0 +1,124 @@
+.cookie-notice {
+  position: fixed;
+  z-index: 420;
+  top: auto;
+  right: auto;
+  left: 24px;
+  bottom: 24px;
+  transform: none;
+  width: min(420px, calc(100vw - 48px));
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 4px 10px;
+  padding: 18px 14px 18px 22px;
+  background: #fff;
+  color: #000;
+  border: 1px solid rgba(2, 71, 68, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 18px 44px rgba(2, 71, 68, 0.16);
+  font-family: "Outfit", sans-serif;
+  overflow: hidden;
+}
+.cookie-notice::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #024744;
+}
+.cookie-notice[hidden] { display: none !important; }
+.cookie-notice .cookie-kicker {
+  margin: 2px 0 6px;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #024744;
+}
+.cookie-notice p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.76);
+}
+.cookie-notice a {
+  color: #024744;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cookie-notice a:hover { color: #000; }
+.cookie-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+.cookie-actions button {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.cookie-decline {
+  background: #fff;
+  color: #024744;
+  border: 1px solid rgba(2, 71, 68, 0.28);
+}
+.cookie-decline:hover {
+  background: rgba(2, 71, 68, 0.06);
+  border-color: #024744;
+}
+.cookie-accept {
+  background: #024744;
+  color: #fff;
+  border: 1px solid #024744;
+}
+.cookie-accept:hover {
+  background: #000;
+  border-color: #000;
+}
+.cookie-actions button:focus-visible {
+  outline: 2px solid #024744;
+  outline-offset: 2px;
+}
+.cookie-close {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(2, 71, 68, 0.16);
+  border-radius: 50%;
+  background: #fff;
+  color: #024744;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.cookie-close:hover {
+  background: #024744;
+  border-color: #024744;
+  color: #fff;
+}
+.cookie-close:focus-visible {
+  outline: 2px solid #024744;
+  outline-offset: 2px;
+}
+@media (max-width: 800px) {
+  .cookie-notice {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    transform: none;
+    width: auto;
+    padding: 16px 12px 16px 18px;
+  }
+}

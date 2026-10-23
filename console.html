@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veldren Console</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="console.css" />
+  <link rel="stylesheet" href="cookie-notice.css" />
+</head>
+<body class="console-page">
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-nav" id="siteNav">
+    <a href="index.html" class="site-logo">
+      <img src="logo.png" alt="Veldren" />
+    </a>
+    <button class="site-toggle" id="siteToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteLinks">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="site-links" id="siteLinks">
+      <div class="site-menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#programs">Platform</a>
+        <a href="index.html#usecases">Use Cases</a>
+        <a href="index.html#pricing">Plans</a>
+      </div>
+      <a href="console.html" class="site-signin" aria-current="page">Veldren Console <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </nav>
+  </header>
+
+  <div class="console">
+    <aside class="rail">
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="logo-light.png" alt="Veldren" />
+        <small>Console</small>
+      </a>
+      <nav class="rail-nav" aria-label="Console">
+        <button type="button" class="rail-link is-on" data-view="registry">
+          <i class="fa-solid fa-industry"></i> Registry
+        </button>
+        <button type="button" class="rail-link" data-view="alerts">
+          <i class="fa-solid fa-triangle-exclamation"></i> Alerts
+        </button>
+        <button type="button" class="rail-link" data-view="orders">
+          <i class="fa-solid fa-clipboard-check"></i> Orders
+        </button>
+        <button type="button" class="rail-link" data-view="review">
+          <i class="fa-solid fa-user-check"></i> Review
+        </button>
+      </nav>
+      <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Product site</a>
+    </aside>
+
+    <main class="stage">
+      <header class="stage-bar">
+        <div>
+          <p class="eyebrow">Line 2</p>
+          <h1>Asset P-14</h1>
+        </div>
+        <span class="status">Waiting for review</span>
+      </header>
+
+      <section class="view is-visible" id="registry">
+        <h2>Registry</h2>
+        <p>Facilities, production lines, and assets in one record, so every signal has a machine to belong to.</p>
+        <ul class="record-list">
+          <li class="is-selected"><span>P-14</span><small>Line 2, press line</small></li>
+          <li><span>Press cell</span><small>Line 2</small></li>
+          <li><span>Test station</span><small>Line 2</small></li>
+        </ul>
+      </section>
+
+      <section class="view" id="alerts" hidden>
+        <h2>Open alert</h2>
+        <p>Press line vibration stays on this asset until someone reviews it.</p>
+        <article class="record-card">
+          <h3>Press line vibration</h3>
+          <p>Asset P-14, waiting for review. The signal summary is kept with the same machine.</p>
+        </article>
+      </section>
+
+      <section class="view" id="orders" hidden>
+        <h2>Work order</h2>
+        <p>The maintenance action stays linked to the alert and to asset P-14.</p>
+        <article class="record-card">
+          <h3>Order linked</h3>
+          <p>Work order linked, awaiting review. The same path is available at every facility.</p>
+        </article>
+      </section>
+
+      <section class="view" id="review" hidden>
+        <h2>Model review</h2>
+        <p>A finding stays on the asset so an engineer can accept it, dismiss it, or open the work order from the same screen.</p>
+        <article class="record-card">
+          <h3>Prediction record</h3>
+          <p>Model output stored for P-14, ready for a structured review rather than an unread export.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll(".rail-link");
+    const views = document.querySelectorAll(".view");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        const id = link.dataset.view;
+        links.forEach((item) => item.classList.toggle("is-on", item === link));
+        views.forEach((view) => {
+          const show = view.id === id;
+          view.hidden = !show;
+          view.classList.toggle("is-visible", show);
+        });
+      });
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-intro">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="logo-light.png" alt="Veldren" />
+          </a>
+          <p class="footer-lead">Veldren is the operations record for assets, sensor summaries, anomaly alerts, work orders, and reviewed model findings.</p>
+          <p class="footer-founded">Veldren Technologies, founded by Azelie Morgan on April 12, 2023.</p>
+        </div>
+        <div class="footer-col newsletter">
+          <h5>Enterprise updates</h5>
+          <form class="subscribe" id="newsletterForm" action="https://formspree.io/f/xbgdzepb" method="POST" novalidate>
+            <input type="email" name="email" placeholder="Work email" aria-label="Work email" required autocomplete="email" />
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <p class="newsletter-note" id="newsletterNote" hidden></p>
+          <p>Notes on plant records, alerts, and maintenance workflows.</p>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="index.html#about">Product</a>
+          <a href="index.html#architecture">Architecture</a>
+          <a href="index.html#technology">Technology</a>
+          <a href="index.html#usecases">Use cases</a>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <a href="index.html#programs">Asset registry</a>
+          <a href="index.html#programs">Anomaly alerts</a>
+          <a href="index.html#programs">Work orders</a>
+          <a href="index.html#technology">Model review</a>
+        </div>
+        <div class="footer-col">
+          <h5>Help</h5>
+          <a href="index.html#contact">Engagement</a>
+          <a href="index.html#faq">Support Center</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="footer-col footer-reach">
+          <h5>Contact Us</h5>
+          <a href="https://veldren.net"><i class="fa-solid fa-globe"></i> veldren.net</a>
+          <a href="mailto:info@veldren.net"><i class="fa-solid fa-envelope"></i> info@veldren.net</a>
+        </div>
+      </div>
+
+      <div class="footer-offices">
+        <article class="footer-office">
+          <p class="footer-office-kicker">United States</p>
+          <p class="footer-office-name">Veldren Technologies LLC</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=550%20California%20St%2C%20San%20Francisco%2C%20CA%2094104%2C%20USA" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> 550 California St, San Francisco, CA 94104, USA</a>
+          <a href="tel:+14150350186"><i class="fa-solid fa-phone"></i> +1 415 035 0186</a>
+        </article>
+        <article class="footer-office">
+          <p class="footer-office-kicker">Sri Lanka</p>
+          <p class="footer-office-name">Veldren Technologies (Pvt) Ltd</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=No.%2036%2C%20Peradeniya%20Road%2C%20Kandy%2C%20Sri%20Lanka" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> No. 36, Peradeniya Road, Kandy, Sri Lanka</a>
+          <a href="tel:+94762090186"><i class="fa-solid fa-phone"></i> +94 76 209 0186</a>
+        </article>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Veldren Technologies. All Rights Reserved.</span>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const siteNav = document.getElementById("siteNav");
+    const siteLinks = document.getElementById("siteLinks");
+    const siteToggle = document.getElementById("siteToggle");
+    const progress = document.getElementById("scrollProgress");
+
+    function onScroll() {
+      siteNav?.classList.toggle("is-scrolled", window.scrollY > 12);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (progress) progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    siteToggle?.addEventListener("click", () => {
+      const open = siteLinks.classList.toggle("is-open");
+      siteToggle.setAttribute("aria-expanded", String(open));
+      siteToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      siteToggle.innerHTML = `<i class="fa-solid ${open ? "fa-xmark" : "fa-bars"}"></i>`;
+    });
+    siteLinks?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteLinks.classList.remove("is-open");
+        siteToggle?.setAttribute("aria-expanded", "false");
+        siteToggle?.setAttribute("aria-label", "Open menu");
+        if (siteToggle) siteToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    const newsletterForm = document.getElementById("newsletterForm");
+    const newsletterNote = document.getElementById("newsletterNote");
+    newsletterForm?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const emailField = newsletterForm.querySelector('input[type="email"]');
+      const valid = emailField && emailField.value.trim() && emailField.checkValidity();
+      if (!valid) {
+        newsletterNote.hidden = false;
+        newsletterNote.classList.add("is-error");
+        newsletterNote.textContent = "Enter a valid work email.";
+        return;
+      }
+      const submitButton = newsletterForm.querySelector('button[type="submit"]');
+      if (submitButton) submitButton.disabled = true;
+      newsletterNote.hidden = true;
+      try {
+        const response = await fetch(newsletterForm.action, {
+          method: "POST",
+          body: new FormData(newsletterForm),
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error("Formspree rejected the subscription");
+        newsletterForm.reset();
+        newsletterNote.hidden = false;
+        newsletterNote.classList.remove("is-error");
+        newsletterNote.textContent = "Thanks, you are on the list.";
+      } catch {
+        newsletterNote.hidden = false;
+        newsletterNote.classList.add("is-error");
+        newsletterNote.textContent = "Something went wrong. Please try again or email info@veldren.net.";
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
+  </script>
+  <aside class="cookie-notice" id="cookieNotice" role="dialog" aria-label="Cookie notice" hidden>
+    <div class="cookie-copy">
+      <p class="cookie-kicker">Cookie notice</p>
+      <p>We use cookies that are needed to run this site, protect forms, and keep chat available. Details are in the <a href="privacy.html#cookies">Privacy Policy</a>.</p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-decline" id="cookieDecline">Decline</button>
+        <button type="button" class="cookie-accept" id="cookieAccept">Accept</button>
+      </div>
+    </div>
+    <button type="button" class="cookie-close" id="cookieClose" aria-label="Close cookie notice">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </aside>
+  <script type="module" src="cookie-notice.js"></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function () {
+      var settingsUrl = "va.tawk.to/v1/widget-settings";
+      var originalFetch = window.fetch;
+      if (!originalFetch) return;
+      window.fetch = function (input, init) {
+        var url = typeof input === "string" ? input : (input && input.url) || "";
+        var pending = originalFetch.apply(this, arguments);
+        if (url.indexOf(settingsUrl) === -1) return pending;
+        return pending.then(function (response) {
+          return response.json().then(function (data) {
+            if (data && data.data && data.data.widget) delete data.data.widget.bubble;
+            return new Response(JSON.stringify(data), {
+              status: response.status,
+              statusText: response.statusText,
+              headers: { "Content-Type": "application/json" }
+            });
+          });
+        });
+      };
+    })();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6adae1c029796e345bbc6d0a/1k5jg3m5e';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

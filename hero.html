@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veldren: Industrial Operations Intelligence</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="cookie-notice.css" />
+</head>
+<body class="cm-page">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <section class="cm-hero">
+    <div class="cm-frame">
+
+      <!-- Light main panel -->
+      <div class="cm-main">
+
+        <a href="index.html" class="cm-logo">
+          <img src="logo.png" alt="Veldren" />
+        </a>
+
+        <div class="cm-notch-top">
+          <a href="#" class="goo-btn">
+            <span class="goo-shapes"><span class="g-pill"></span><span class="g-dot"></span></span>
+            <span class="goo-label">Sign In</span>
+            <span class="goo-icon"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+          </a>
+          <ul class="cm-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Platform</a></li>
+            <li><a href="#">Use Cases</a></li>
+            <li><a href="#">Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="cm-content">
+          <h1>Turn plant signals into tracked maintenance.</h1>
+          <p>Veldren is the operations record for assets, sensor summaries, anomaly alerts, work orders, and reviewed model findings.</p>
+
+          <form class="cm-search" onsubmit="event.preventDefault()">
+            <div class="cm-tabs">
+              <span class="goo-shapes"><span class="t-under"></span><span class="t-inst"></span></span>
+              <button type="button" class="cm-tab active">Assets</button>
+              <button type="button" class="cm-tab">Alerts</button>
+            </div>
+            <span class="cm-divider"></span>
+            <input type="text" placeholder="Search assets, alerts, orders" aria-label="Search assets, alerts, orders" />
+            <button type="submit" class="cm-search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+
+        <div class="cm-card">
+          <img src="hero.png" alt="Warehouse supervisor checking a tablet in an aisle" />
+          <div class="cm-card-body">
+            <h3>Open alert</h3>
+            <div class="cm-card-info">
+              <div class="cm-card-row">
+                <h4>Press line vibration</h4>
+                <span class="cm-rating"><i class="fa-solid fa-star"></i> High</span>
+              </div>
+              <div class="cm-card-meta">
+                <strong>Asset P-14, Line 2</strong>
+                <span>Work order linked, awaiting review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cm-trust">
+          <span class="cm-trust-icon"><i class="fa-solid fa-star"></i></span>
+          <div>
+            <em>One plant record</em>
+            <strong>Alert <small>to order</small></strong>
+          </div>
+        </div>
+
+        <div class="cm-notch-bottom"></div>
+      </div>
+
+      <!-- Dark bottom panel -->
+      <div class="cm-bottom">
+        <div class="cm-bottom-left">
+          <h2>Plant <span>and<svg class="cm-swirl" viewBox="0 0 200 60" fill="none" aria-hidden="true">
+            <path d="M5 45 C 60 55, 120 50, 165 25 C 195 8, 185 -2, 160 6 C 130 16, 110 40, 135 52" stroke="#DCD3CA" stroke-width="1.4" stroke-linecap="round" />
+          </svg></span><br />Intelligence</h2>
+          <div class="cm-actions">
+            <a href="#" class="goo-btn">
+              <span class="goo-shapes"><span class="g-pill"></span><span class="g-dot"></span></span>
+              <span class="goo-label">Request access</span>
+              <span class="goo-icon"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="cm-services">
+          <a href="#" class="cm-service"><img src="icon-assets.png" alt="" /><span>Assets</span></a>
+          <a href="#" class="cm-service"><img src="icon-signals.png" alt="" /><span>Signals</span></a>
+          <a href="#" class="cm-service"><img src="icon-alerts.png" alt="" /><span>Alerts</span></a>
+          <a href="#" class="cm-service"><img src="icon-orders.png" alt="" /><span>Orders</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll(".cm-tab").forEach((tab, i, tabs) =>
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+      })
+    );
+  </script>
+  <aside class="cookie-notice" id="cookieNotice" role="dialog" aria-label="Cookie notice" hidden>
+    <div class="cookie-copy">
+      <p class="cookie-kicker">Cookie notice</p>
+      <p>We use cookies that are needed to run this site, protect forms, and keep chat available. Details are in the <a href="privacy.html#cookies">Privacy Policy</a>.</p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-decline" id="cookieDecline">Decline</button>
+        <button type="button" class="cookie-accept" id="cookieAccept">Accept</button>
+      </div>
+    </div>
+    <button type="button" class="cookie-close" id="cookieClose" aria-label="Close cookie notice">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </aside>
+  <script type="module" src="cookie-notice.js"></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function () {
+      var settingsUrl = "va.tawk.to/v1/widget-settings";
+      var originalFetch = window.fetch;
+      if (!originalFetch) return;
+      window.fetch = function (input, init) {
+        var url = typeof input === "string" ? input : (input && input.url) || "";
+        var pending = originalFetch.apply(this, arguments);
+        if (url.indexOf(settingsUrl) === -1) return pending;
+        return pending.then(function (response) {
+          return response.json().then(function (data) {
+            if (data && data.data && data.data.widget) delete data.data.widget.bubble;
+            return new Response(JSON.stringify(data), {
+              status: response.status,
+              statusText: response.statusText,
+              headers: { "Content-Type": "application/json" }
+            });
+          });
+        });
+      };
+    })();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6adae1c029796e345bbc6d0a/1k5jg3m5e';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

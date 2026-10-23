@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veldren: Industrial Operations Intelligence</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gilda+Display&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cookie-notice.css" />
+  <link rel="stylesheet" href="hero.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-nav" id="siteNav">
+    <a href="#home" class="site-logo">
+      <img src="logo.png" alt="Veldren" />
+    </a>
+    <button class="site-toggle" id="siteToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteLinks">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="site-links" id="siteLinks">
+      <div class="site-menu">
+        <a href="#home" data-nav="home" class="is-active">Home</a>
+        <a href="#programs" data-nav="programs">Platform</a>
+        <a href="#usecases" data-nav="usecases">Use Cases</a>
+        <a href="#pricing" data-nav="pricing">Plans</a>
+      </div>
+      <a href="console.html" class="site-signin">Veldren Console <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </nav>
+  </header>
+
+  <!-- ============ HEADER / HERO ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <section class="cm-hero" id="home">
+    <div class="cm-frame">
+
+      <!-- Light main panel -->
+      <div class="cm-main">
+
+        <a href="#home" class="cm-logo">
+          <img src="logo.png" alt="Veldren" />
+        </a>
+
+        <div class="cm-notch-top">
+          <a href="#" class="goo-btn">
+            <span class="goo-shapes"><span class="g-pill"></span><span class="g-dot"></span></span>
+            <span class="goo-label">Sign In</span>
+            <span class="goo-icon"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+          </a>
+          <ul class="cm-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#programs">Platform</a></li>
+            <li><a href="#usecases">Use Cases</a></li>
+            <li><a href="#pricing">Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="cm-content">
+          <span class="section-eyebrow">Operations record</span>
+          <h1>Turn plant signals into tracked maintenance.</h1>
+          <p>Veldren is the operations record for assets, sensor summaries, anomaly alerts, work orders, and reviewed model findings.</p>
+
+          <div class="cm-cta">
+            <a href="console.html" class="cm-cta-solid">Veldren Console</a>
+            <a href="#programs" class="cm-cta-ghost">Explore platform</a>
+          </div>
+        </div>
+
+        <div class="cm-card">
+          <img src="hero.png" alt="Warehouse supervisor checking a tablet in an aisle" />
+          <div class="cm-card-body">
+            <h3>Open alert</h3>
+            <div class="cm-card-info">
+              <div class="cm-card-row">
+                <h4>Press line vibration</h4>
+                <span class="cm-rating"><i class="fa-solid fa-star"></i> High</span>
+              </div>
+              <div class="cm-card-meta">
+                <strong>Asset P-14, Line 2</strong>
+                <span>Work order linked, awaiting review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cm-trust">
+          <span class="cm-trust-icon"><i class="fa-solid fa-star"></i></span>
+          <div>
+            <em>One plant record</em>
+            <strong>Alert <small>to order</small></strong>
+          </div>
+        </div>
+
+        <div class="cm-notch-bottom"></div>
+      </div>
+
+      <!-- Dark bottom panel -->
+      <div class="cm-bottom">
+        <div class="cm-bottom-left">
+          <h2>Plant <span>and<svg class="cm-swirl" viewBox="0 0 200 60" fill="none" aria-hidden="true">
+            <path d="M5 45 C 60 55, 120 50, 165 25 C 195 8, 185 -2, 160 6 C 130 16, 110 40, 135 52" stroke="#DCD3CA" stroke-width="1.4" stroke-linecap="round" />
+          </svg></span><br />Intelligence</h2>
+          <div class="cm-actions">
+            <a href="#contact" class="goo-btn">
+              <span class="goo-shapes"><span class="g-pill"></span><span class="g-dot"></span></span>
+              <span class="goo-label">Request access</span>
+              <span class="goo-icon"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="cm-services">
+          <a href="#programs" class="cm-service"><img src="icon-assets.png" alt="" /><span>Assets</span></a>
+          <a href="#programs" class="cm-service"><img src="icon-signals.png" alt="" /><span>Signals</span></a>
+          <a href="#programs" class="cm-service"><img src="icon-alerts.png" alt="" /><span>Alerts</span></a>
+          <a href="#programs" class="cm-service"><img src="icon-orders.png" alt="" /><span>Orders</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PARTNERS ============ -->
+  <section class="partners">
+    <div class="container partners-inner">
+      <div class="partners-text">
+        <h3>Plant record</h3>
+        <span>From signal to reviewed action</span>
+      </div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <span><i class="fa-solid fa-industry"></i> Asset registry</span>
+          <span><i class="fa-solid fa-wave-square"></i> Signal records</span>
+          <span><i class="fa-solid fa-triangle-exclamation"></i> Anomaly alerts</span>
+          <span><i class="fa-solid fa-clipboard-check"></i> Work orders</span>
+          <span><i class="fa-solid fa-industry"></i> Asset registry</span>
+          <span><i class="fa-solid fa-wave-square"></i> Signal records</span>
+          <span><i class="fa-solid fa-triangle-exclamation"></i> Anomaly alerts</span>
+          <span><i class="fa-solid fa-clipboard-check"></i> Work orders</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container about-inner">
+      <div class="about-image reveal">
+        <img src="product.jpg" alt="Engineer in a hard hat reviewing a tablet on the plant floor" />
+        <div class="trainer-badge">
+          <span class="badge-icon"><i class="fa-solid fa-industry"></i></span>
+          <span>Facility<br />registry</span>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-eyebrow">The product</span>
+        <h2>One record for the<br />plant, not another inbox</h2>
+        <p>Manufacturers already collect machine and sensor data. What is missing is a single place to turn those signals into tracked alerts, maintenance actions, and reviewed model findings.</p>
+        <p>Veldren keeps facilities, production lines, and assets together with the signal summaries, anomaly alerts, work orders, and prediction history that belong to them.</p>
+        <a href="#programs" class="btn btn-primary">See the platform</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMS ============ -->
+  <section class="programs section" id="programs">
+    <div class="container">
+      <div class="flow-head reveal">
+        <span class="section-eyebrow">Platform</span>
+        <h2>Industrial IoT and<br />operations intelligence</h2>
+        <p>A working record of the plant: what is installed, what the signals say, which anomalies need a person, and which maintenance action follows.</p>
+      </div>
+      <ol class="flow reveal">
+        <li class="flow-step">
+          <span class="flow-mark"><img src="icon-platform-assets.png" alt="" /></span>
+          <h3>Asset registry</h3>
+          <p>Facilities, production lines, and assets in one registry, so every signal has a machine to belong to.</p>
+          <a href="#architecture">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="flow-step">
+          <span class="flow-mark"><img src="icon-platform-signals.png" alt="" /></span>
+          <h3>Signal records</h3>
+          <p>Sensor-signal and telemetry summaries kept with the asset, ready for operations review rather than a raw dump.</p>
+          <a href="#architecture">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="flow-step is-focus">
+          <span class="flow-mark"><img src="icon-platform-alerts-light.png" alt="" /></span>
+          <h3>Anomaly alerts</h3>
+          <p>Alerts stay visible until someone reviews them, so fatigue does not bury the finding that needs a work order.</p>
+          <a href="#preview">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+        <li class="flow-step">
+          <span class="flow-mark"><img src="icon-platform-orders.png" alt="" /></span>
+          <h3>Work orders</h3>
+          <p>Maintenance actions linked back to the alert and the asset, with the same practice available at every facility.</p>
+          <a href="#preview">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE ============ -->
+  <section class="why stack section" id="architecture">
+    <div class="container">
+      <div class="stack-head reveal">
+        <div>
+          <span class="section-eyebrow">How it fits</span>
+          <h2>Architecture for a<br />single plant record</h2>
+        </div>
+        <a href="#technology" class="btn btn-primary">See the stack</a>
+      </div>
+      <div class="layer-stack">
+        <article class="layer layer-a reveal">
+          <span class="layer-idx">01</span>
+          <div>
+            <h3>Registry</h3>
+            <p>Facilities, lines, and assets are the spine. Signals, alerts, orders, and model outputs attach to that asset instead of a separate spreadsheet.</p>
+          </div>
+        </article>
+        <article class="layer layer-b reveal">
+          <span class="layer-idx">02</span>
+          <div>
+            <h3>Signal and alert layer</h3>
+            <p>Telemetry summaries land on the asset. Anomaly alerts stay in a review queue until a reliability engineer accepts, dismisses, or turns them into work.</p>
+          </div>
+        </article>
+        <article class="layer layer-c reveal">
+          <span class="layer-idx">03</span>
+          <div>
+            <h3>Action and model review</h3>
+            <p>Work orders close the loop. Predictive-maintenance outputs and prediction history stay on the asset so a finding can be checked later.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHNOLOGY ============ -->
+  <section class="tech section" id="technology">
+    <div class="container">
+      <div class="tech-head reveal">
+        <div>
+          <span class="section-eyebrow">The stack</span>
+          <h2>Technology showcase</h2>
+        </div>
+        <p>GPU acceleration is proposed as the layer for running model inference. It is part of this product page only, not the web application, backend, or database.</p>
+      </div>
+      <ol class="tech-rail">
+        <li class="tech-node is-lead reveal">
+          <span class="tech-index">01</span>
+          <img src="icon-tech-nvidia.png" alt="" />
+          <h3>Onsite inference</h3>
+          <p>Proposed architecture for running predictive maintenance models closer to the plant and returning outputs for review.</p>
+        </li>
+        <li class="tech-node reveal">
+          <span class="tech-index">02</span>
+          <img src="icon-tech-signals.png" alt="" />
+          <h3>Signal store</h3>
+          <p>Summaries of sensor and telemetry records, kept against the asset so history is available without a second system.</p>
+        </li>
+        <li class="tech-node reveal">
+          <span class="tech-index">03</span>
+          <img src="icon-tech-models.png" alt="" />
+          <h3>Model outputs</h3>
+          <p>Prediction records and model findings stored per asset, ready for a structured review rather than an unread export.</p>
+        </li>
+        <li class="tech-node reveal">
+          <span class="tech-index">04</span>
+          <img src="icon-tech-review.png" alt="" />
+          <h3>Human review</h3>
+          <p>Engineers accept or reject a model finding and, when it holds, open the maintenance work order from the same screen.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PREVIEW ============ -->
+  <section class="preview section" id="preview">
+    <div class="container">
+      <div class="app-shell reveal">
+        <div class="app-top">
+          <div>
+            <div class="app-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="section-eyebrow">The application</span>
+            <h2>What the application<br />is built to show</h2>
+          </div>
+          <a href="#contact" class="btn btn-primary">Request a walkthrough</a>
+        </div>
+        <p class="app-lead">The product is an operations web application: a registry, a signal summary, an alert queue, a work order, and a model-review record. Dashboards sit on top of those records.</p>
+        <div class="app-panels">
+          <article class="panel panel-list">
+            <h3>Registry</h3>
+            <ul>
+              <li class="is-on">P-14, Line 2</li>
+              <li>Press cell</li>
+              <li>Test station</li>
+            </ul>
+          </article>
+          <article class="panel panel-alert">
+            <h3>Open alert</h3>
+            <p>Press line vibration</p>
+            <span>Asset P-14, waiting for review</span>
+          </article>
+          <article class="panel panel-order">
+            <h3>Work order</h3>
+            <p>Linked to the alert and the same asset, with the maintenance action still on that record.</p>
+          </article>
+        </div>
+        <p class="app-roles">Plant managers see equipment health. Maintenance engineers see the order. Reliability engineers see which model findings were accepted. IoT engineers see the signal behind the alert.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ USE CASES ============ -->
+  <section class="cases section" id="usecases">
+    <div class="container">
+      <div class="cases-head reveal">
+        <div>
+          <span class="section-eyebrow">Where it runs</span>
+          <h2>Manufacturing use cases</h2>
+        </div>
+        <p>Same plant record for teams that run different processes, with maintenance practice that does not change from one facility to the next.</p>
+      </div>
+      <div class="case-mosaic">
+        <button type="button" class="case-tile case-tile-main case-bg-discrete reveal" data-case-open="discrete" aria-haspopup="dialog">
+          <img class="case-icon" src="icon-case-discrete.png" alt="" />
+          <span class="case-cue">View <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          <div>
+            <h3>Discrete plants</h3>
+            <p>Automotive and electronics lines where a press, robot, or test station needs its own alert and work-order history.</p>
+          </div>
+        </button>
+        <button type="button" class="case-tile case-bg-process reveal" data-case-open="process" aria-haspopup="dialog">
+          <img class="case-icon" src="icon-case-process.png" alt="" />
+          <span class="case-cue">View <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          <h3>Process plants</h3>
+          <p>Food, beverage, and chemical operations where unreviewed anomalies turn into unplanned stops.</p>
+        </button>
+        <button type="button" class="case-tile case-bg-ops reveal" data-case-open="ops" aria-haspopup="dialog">
+          <img class="case-icon" src="icon-case-operators.png" alt="" />
+          <span class="case-cue">View <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          <h3>Equipment operators</h3>
+          <p>Teams who run the assets and need health, open alerts, and the order already assigned before the shift starts.</p>
+        </button>
+        <button type="button" class="case-tile case-tile-wide case-bg-maint reveal" data-case-open="maint" aria-haspopup="dialog">
+          <img class="case-icon" src="icon-case-maintenance.png" alt="" />
+          <span class="case-cue">View <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          <div>
+            <h3>Maintenance providers</h3>
+            <p>Service teams who cover more than one site and need the same path from alert to work order at each facility.</p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="case-dialog" id="caseDialog">
+    <div class="case-dialog-frame">
+      <button type="button" class="case-dialog-close" data-case-close aria-label="Close">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+
+      <article class="case-pop" data-case="discrete" hidden aria-labelledby="caseTitleDiscrete">
+        <div class="case-pop-hero">
+          <img class="case-pop-icon" src="icon-case-discrete.png" alt="" />
+          <div>
+            <h3 id="caseTitleDiscrete">Discrete plants</h3>
+            <p>Automotive and electronics lines where a press, robot, or test station needs its own alert and work-order history.</p>
+          </div>
+        </div>
+        <div class="case-pop-body">
+          <span class="section-eyebrow">Where it runs</span>
+          <h4>Each station keeps its own history</h4>
+          <p>A press, robot, or test station is its own asset. The alert and the work order that follow stay on that record, so the line does not split the story across tools.</p>
+          <ul class="case-pop-list">
+            <li><i class="fa-solid fa-industry" aria-hidden="true"></i><span>The station sits on the plant registry with its own signal summary.</span></li>
+            <li><i class="fa-solid fa-bell" aria-hidden="true"></i><span>An anomaly stays on that asset until a reviewer accepts it.</span></li>
+            <li><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i><span>Maintenance opens a work order still linked to the same asset and the original signal.</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Request a walkthrough</a>
+        </div>
+      </article>
+
+      <article class="case-pop" data-case="process" hidden aria-labelledby="caseTitleProcess">
+        <div class="case-pop-hero">
+          <img class="case-pop-icon" src="icon-case-process.png" alt="" />
+          <div>
+            <h3 id="caseTitleProcess">Process plants</h3>
+            <p>Food, beverage, and chemical operations where unreviewed anomalies turn into unplanned stops.</p>
+          </div>
+        </div>
+        <div class="case-pop-body">
+          <span class="section-eyebrow">Where it runs</span>
+          <h4>An anomaly stays visible before it becomes a stop</h4>
+          <p>Food, beverage, and chemical operations use the same plant record. An unreviewed anomaly remains on the asset instead of turning into an unplanned stop with no history.</p>
+          <ul class="case-pop-list">
+            <li><i class="fa-solid fa-industry" aria-hidden="true"></i><span>Vessels, lines, and pumps keep a signal summary on the asset.</span></li>
+            <li><i class="fa-solid fa-bell" aria-hidden="true"></i><span>The anomaly stays open until someone accepts it or sets it aside.</span></li>
+            <li><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i><span>A work order opened from that review stays tied to the signal that raised it.</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Request a walkthrough</a>
+        </div>
+      </article>
+
+      <article class="case-pop" data-case="ops" hidden aria-labelledby="caseTitleOps">
+        <div class="case-pop-hero">
+          <img class="case-pop-icon" src="icon-case-operators.png" alt="" />
+          <div>
+            <h3 id="caseTitleOps">Equipment operators</h3>
+            <p>Teams who run the assets and need health, open alerts, and the order already assigned before the shift starts.</p>
+          </div>
+        </div>
+        <div class="case-pop-body">
+          <span class="section-eyebrow">Where it runs</span>
+          <h4>The shift starts from the asset</h4>
+          <p>Operators need health, open alerts, and the work order already assigned before the shift starts. Those three sit on the same record.</p>
+          <ul class="case-pop-list">
+            <li><i class="fa-solid fa-industry" aria-hidden="true"></i><span>Asset health is on the registry before the crew starts.</span></li>
+            <li><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Open alerts wait on the asset, so the shift does not hunt through another queue.</span></li>
+            <li><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i><span>The work order already assigned is on that asset at the start of the shift.</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Request a walkthrough</a>
+        </div>
+      </article>
+
+      <article class="case-pop" data-case="maint" hidden aria-labelledby="caseTitleMaint">
+        <div class="case-pop-hero">
+          <img class="case-pop-icon" src="icon-case-maintenance.png" alt="" />
+          <div>
+            <h3 id="caseTitleMaint">Maintenance providers</h3>
+            <p>Service teams who cover more than one site and need the same path from alert to work order at each facility.</p>
+          </div>
+        </div>
+        <div class="case-pop-body">
+          <span class="section-eyebrow">Where it runs</span>
+          <h4>The same path at every site</h4>
+          <p>Service teams who cover more than one facility use one maintenance practice. The path does not change from plant to plant.</p>
+          <ul class="case-pop-list">
+            <li><i class="fa-solid fa-industry" aria-hidden="true"></i><span>Alert, review, and work order follow the same steps at each site.</span></li>
+            <li><i class="fa-solid fa-bell" aria-hidden="true"></i><span>The order stays linked to the asset and the signal that started it.</span></li>
+            <li><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i><span>A provider picks up the record at any facility without rebuilding the workflow.</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Request a walkthrough</a>
+        </div>
+      </article>
+    </div>
+  </dialog>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container testimonials-inner">
+      <div class="testimonials-text reveal">
+        <span class="section-eyebrow">Client stories</span>
+        <h2>What the teams<br />say about the record</h2>
+        <p>Plant managers, reliability engineers, and IoT engineers on working from the same asset history.</p>
+        <div class="reviews">
+          <div class="avatars">
+            <img src="emily-johnson.png" alt="Emily Johnson" />
+            <img src="sophia-williams.png" alt="Sophia Williams" />
+            <img src="james-anderson.png" alt="James Anderson" />
+          </div>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <span>From the plant floor</span>
+          </div>
+        </div>
+        <div class="trustpilot"><i class="fa-solid fa-link"></i> One plant record</div>
+      </div>
+
+      <div class="testimonial-slider reveal">
+        <button class="slider-btn prev" id="prevBtn" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="testimonial-card" id="testimonialCard"><i class="fa-solid fa-quote-right quote-mark"></i>
+          <div class="client">
+            <img id="tAvatar" src="emily-johnson.png" alt="Emily Johnson" />
+            <div>
+              <h4 id="tName">Emily Johnson</h4>
+              <span id="tRole">Plant Manager, discrete manufacturing</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p id="tText">We finally have one record for the line: which assets are healthy, which alerts are still open, and which work order is already in motion.</p>
+        </div>
+        <button class="slider-btn next" id="nextBtn" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="section-eyebrow">Subscriptions</span>
+        <h2>Choose the plant plan</h2>
+        <p>Facility subscriptions, connected-asset licensing, reliability modules, analytics, and enterprise integration. Billed per month or per year.</p>
+        <div class="toggle">
+          <button class="toggle-btn active" data-plan="monthly">Monthly</button>
+          <button class="toggle-btn" data-plan="annual">Annual</button>
+        </div>
+      </div>
+
+      <div class="price-cards">
+        <div class="price-card reveal">
+          <span class="plan-name">FACILITY</span>
+          <h3><span class="price" data-monthly="149" data-annual="119">$149</span> <small class="period">per month</small></h3>
+          <p class="price-note" data-monthly="" data-annual="Billed yearly at $1,428" hidden></p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Plant subscription</li>
+            <li><i class="fa-solid fa-check"></i> Asset and line registry</li>
+            <li><i class="fa-solid fa-check"></i> Signal summaries</li>
+            <li class="muted"><i class="fa-solid fa-check"></i> Maintenance module</li>
+            <li class="muted"><i class="fa-solid fa-check"></i> Enterprise integration</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_dRm4gr6jw7QG1Lse965c400" class="btn btn-outline pay-link" data-monthly="https://buy.stripe.com/test_dRm4gr6jw7QG1Lse965c400" data-annual="https://buy.stripe.com/test_8x25kv9vI8UKeye7KI5c402" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </div>
+
+        <div class="price-card featured"><span class="ribbon">Core plan</span>
+          <span class="plan-name">OPERATIONS</span>
+          <h3><span class="price" data-monthly="290" data-annual="230">$290</span> <small class="period">per month</small></h3>
+          <p class="price-note" data-monthly="" data-annual="Billed yearly at $2,760" hidden></p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Multi-plant subscription</li>
+            <li><i class="fa-solid fa-check"></i> Connected-asset licensing</li>
+            <li><i class="fa-solid fa-check"></i> Alerts linked to work orders</li>
+            <li><i class="fa-solid fa-check"></i> Reliability module</li>
+            <li><i class="fa-solid fa-check"></i> Analytics add-on</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_7sY14f4bo1sicq6c0Y5c401" class="btn btn-white pay-link" data-monthly="https://buy.stripe.com/test_7sY14f4bo1sicq6c0Y5c401" data-annual="https://buy.stripe.com/test_7sY5kv6jw6MC4XE2qo5c403" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </div>
+
+        <div class="price-card reveal">
+          <span class="plan-name">ENTERPRISE</span>
+          <h3 class="price-custom">Custom pricing</h3>
+          <p class="price-note">Tailored to your plants, assets, and integration needs.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Integration services</li>
+            <li><i class="fa-solid fa-check"></i> Shared maintenance practice</li>
+            <li><i class="fa-solid fa-check"></i> Prediction history</li>
+            <li class="muted"><i class="fa-solid fa-check"></i> Analytics add-on</li>
+            <li class="muted"><i class="fa-solid fa-check"></i> Multi-plant licensing</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Talk to sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="faq-head reveal">
+        <div>
+          <span class="section-eyebrow">Support</span>
+          <h2>Common Questions</h2>
+        </div>
+        <p>How alerts become work orders, what a facility subscription covers, and how an engagement starts.</p>
+      </div>
+      <div class="faq-panel reveal">
+        <div class="faq-intro">
+          <span class="faq-kicker"><span aria-hidden="true"></span> FAQS</span>
+          <p>Have any other questions?</p>
+          <a href="#contact" class="faq-contact">Contact Us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <span class="faq-count" aria-hidden="true">06</span>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-index">01</span>
+              <span class="faq-label">What does Veldren manage?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <div><p>Facilities, production lines, and assets, plus sensor-signal summaries, anomaly alerts, maintenance work orders, model outputs, and the review of those findings.</p></div>
+            </div>
+          </div>
+          <div class="faq-item open">
+            <button class="faq-q" aria-expanded="true">
+              <span class="faq-index">02</span>
+              <span class="faq-label">How does an alert become a work order?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <div><p>An anomaly stays on the asset until a reviewer accepts it. From that review, maintenance opens a work order that remains linked to the same asset and the original signal.</p></div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-index">03</span>
+              <span class="faq-label">Is NVIDIA part of the application?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <div><p>No. NVIDIA is proposed architecture on this product page, as the acceleration layer for model inference. It is not part of the web application, backend, or database.</p></div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-index">04</span>
+              <span class="faq-label">Which plants is it for?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <div><p>Discrete manufacturing such as automotive and electronics, process plants such as food, beverage, and chemicals, plus equipment operators and maintenance providers.</p></div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-index">05</span>
+              <span class="faq-label">What does a facility subscription include?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <div><p>The plant registry, signal summaries, and the alert queue. Maintenance, analytics, connected-asset licensing, and enterprise integration are added on the Operations and Enterprise plans.</p></div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span class="faq-index">06</span>
+              <span class="faq-label">How does an engagement start?</span>
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a">
+              <div><p>Write to <a href="mailto:info@veldren.net">info@veldren.net</a>, or call <a href="tel:+14150350186">+1 415 035 0186</a> in the United States or <a href="tel:+94762090186">+94 76 209 0186</a> in Sri Lanka, with the facilities and asset types you run. We reply with a walkthrough of the registry, alert queue, and work-order path.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-board reveal">
+        <span class="cb-mark" aria-hidden="true"></span>
+        <span class="cb-tab" aria-hidden="true"><i class="fa-solid fa-bars"></i></span>
+        <span class="cb-accent" aria-hidden="true"></span>
+
+        <form class="cb-form" id="contactForm" action="https://formspree.io/f/mnpjgyby" method="POST" novalidate>
+          <span class="section-eyebrow">Engagement</span>
+          <h2>Contact Us</h2>
+          <p class="cb-lead">Tell us about your facilities. We will follow up on a plant subscription or an enterprise integration.</p>
+          <label class="cb-field">
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label class="cb-field">
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="cb-field">
+            <span>Message</span>
+            <textarea name="message" rows="2" required></textarea>
+          </label>
+          <div class="cb-captcha" id="contactCaptcha"></div>
+          <button type="submit" class="cb-send">Send</button>
+          <p class="form-note" id="contactNote" hidden></p>
+        </form>
+
+        <aside class="cb-info">
+          <span class="cb-dot" aria-hidden="true"></span>
+          <h3>Info</h3>
+          <ul>
+            <li><a href="mailto:info@veldren.net"><i class="fa-regular fa-envelope"></i> <span>info@veldren.net</span></a></li>
+            <li><a href="https://veldren.net"><i class="fa-solid fa-globe"></i> <span>veldren.net</span></a></li>
+            <li><a href="tel:+14150350186"><i class="fa-solid fa-phone"></i> <span>+1 415 035 0186</span></a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=550%20California%20St%2C%20San%20Francisco%2C%20CA%2094104%2C%20USA" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> <span>Veldren Technologies LLC<br />550 California St, San Francisco, CA 94104, USA</span></a></li>
+            <li><a href="tel:+94762090186"><i class="fa-solid fa-phone"></i> <span>+94 76 209 0186</span></a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=No.%2036%2C%20Peradeniya%20Road%2C%20Kandy%2C%20Sri%20Lanka" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> <span>Veldren Technologies (Pvt) Ltd<br />No. 36, Peradeniya Road, Kandy, Sri Lanka</span></a></li>
+          </ul>
+        </aside>
+
+        <div class="cb-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta" id="join">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="cta-copy">
+          <span class="section-eyebrow">Enterprise engagement</span>
+          <h2>Ready to put the plant<br />on one record?</h2>
+          <p>Walk through assets, alerts, and work orders with the team that runs your facilities.</p>
+          <div class="cta-actions">
+            <a href="#pricing" class="btn btn-white">View plans</a>
+            <a href="#contact" class="btn cta-ghost">Talk to us</a>
+          </div>
+        </div>
+        <figure class="cta-photo">
+          <img src="cta.jpg" alt="Plant engineer writing on a clipboard beside process piping" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-intro">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <img src="logo-light.png" alt="Veldren" />
+          </a>
+          <p class="footer-lead">Veldren is the operations record for assets, sensor summaries, anomaly alerts, work orders, and reviewed model findings.</p>
+          <p class="footer-founded">Veldren Technologies, founded by Azelie Morgan on April 12, 2023.</p>
+        </div>
+        <div class="footer-col newsletter">
+          <h5>Enterprise updates</h5>
+          <form class="subscribe" id="newsletterForm" action="https://formspree.io/f/xbgdzepb" method="POST" novalidate>
+            <input type="email" name="email" placeholder="Work email" aria-label="Work email" required autocomplete="email" />
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <p class="newsletter-note" id="newsletterNote" hidden></p>
+          <p>Notes on plant records, alerts, and maintenance workflows.</p>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#about">Product</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#technology">Technology</a>
+          <a href="#usecases">Use cases</a>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <a href="#programs">Asset registry</a>
+          <a href="#programs">Anomaly alerts</a>
+          <a href="#programs">Work orders</a>
+          <a href="#technology">Model review</a>
+        </div>
+        <div class="footer-col">
+          <h5>Help</h5>
+          <a href="#contact">Engagement</a>
+          <a href="#faq">Support Center</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="footer-col footer-reach">
+          <h5>Contact Us</h5>
+          <a href="https://veldren.net"><i class="fa-solid fa-globe"></i> veldren.net</a>
+          <a href="mailto:info@veldren.net"><i class="fa-solid fa-envelope"></i> info@veldren.net</a>
+        </div>
+      </div>
+
+      <div class="footer-offices">
+        <article class="footer-office">
+          <p class="footer-office-kicker">United States</p>
+          <p class="footer-office-name">Veldren Technologies LLC</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=550%20California%20St%2C%20San%20Francisco%2C%20CA%2094104%2C%20USA" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> 550 California St, San Francisco, CA 94104, USA</a>
+          <a href="tel:+14150350186"><i class="fa-solid fa-phone"></i> +1 415 035 0186</a>
+        </article>
+        <article class="footer-office">
+          <p class="footer-office-kicker">Sri Lanka</p>
+          <p class="footer-office-name">Veldren Technologies (Pvt) Ltd</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=No.%2036%2C%20Peradeniya%20Road%2C%20Kandy%2C%20Sri%20Lanka" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> No. 36, Peradeniya Road, Kandy, Sri Lanka</a>
+          <a href="tel:+94762090186"><i class="fa-solid fa-phone"></i> +94 76 209 0186</a>
+        </article>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Veldren Technologies. All Rights Reserved.</span>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.onContactCaptchaLoad = function () {
+      window.dispatchEvent(new Event("contact-captcha-ready"));
+    };
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onContactCaptchaLoad&render=explicit" async defer></script>
+  <script type="module" src="script.js"></script>
+  <aside class="cookie-notice" id="cookieNotice" role="dialog" aria-label="Cookie notice" hidden>
+    <div class="cookie-copy">
+      <p class="cookie-kicker">Cookie notice</p>
+      <p>We use cookies that are needed to run this site, protect forms, and keep chat available. Details are in the <a href="privacy.html#cookies">Privacy Policy</a>.</p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-decline" id="cookieDecline">Decline</button>
+        <button type="button" class="cookie-accept" id="cookieAccept">Accept</button>
+      </div>
+    </div>
+    <button type="button" class="cookie-close" id="cookieClose" aria-label="Close cookie notice">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </aside>
+  <script type="module" src="cookie-notice.js"></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function () {
+      var settingsUrl = "va.tawk.to/v1/widget-settings";
+      var originalFetch = window.fetch;
+      if (!originalFetch) return;
+      window.fetch = function (input, init) {
+        var url = typeof input === "string" ? input : (input && input.url) || "";
+        var pending = originalFetch.apply(this, arguments);
+        if (url.indexOf(settingsUrl) === -1) return pending;
+        return pending.then(function (response) {
+          return response.json().then(function (data) {
+            if (data && data.data && data.data.widget) delete data.data.widget.bubble;
+            return new Response(JSON.stringify(data), {
+              status: response.status,
+              statusText: response.statusText,
+              headers: { "Content-Type": "application/json" }
+            });
+          });
+        });
+      };
+    })();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6adae1c029796e345bbc6d0a/1k5jg3m5e';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>
